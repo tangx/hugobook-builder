@@ -1,17 +1,9 @@
 #!/bin/bash
 
-cd $(dirname $0)
+source ../.hugobook.env
+# export BASE_URL=http://books.tangx.in/
 
-rm -f content/*.md
-
-cp -a ../docs/* content/
-cp content/README.md content/_index.md
-cp content/SUMMARY.md content/index.md
-find content/ -name "*.md" | xargs -n 1 sed -i 's/.md//g'
+hugo --gc --minify --cleanDestinationDir    \
+    --baseURL=$BASE_URL
 
 
-hugo --gc --minify --cleanDestinationDir
-
-
-# httpserve --path /kubebuilder/ --rootdir public
-# httpserve --rootdir public
