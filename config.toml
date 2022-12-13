@@ -1,4 +1,4 @@
-baseURL = "https://tangx.in/kubebuilder-zero-to-one/"
+baseURL = "http://tangx.in/kubebuilder-zero-to-one/"
 languageCode = "en-us"
 title = "kuberbuilder 从零开始"
 theme="book"
